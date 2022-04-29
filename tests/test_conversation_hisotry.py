@@ -2,6 +2,7 @@ import os
 
 import pytest
 from slack_sdk.errors import SlackApiError
+from slack_sdk.web import SlackResponse
 
 from slapy.client_errors import InvalidAuthError, MissingScopeError
 from slapy.conversation_history_api import ConversationHistoryAPI, ConversationHistoryParams
@@ -17,6 +18,13 @@ class TestConversationHistory:
     @pytest.fixture()
     def TEST_CHANNEL_ID(self) -> str:
         return os.environ['TEST_CHANNEL_ID']
+
+    @my_vcr.use_cassette()
+    def test_call_api_ok(self, api: ConversationHistoryAPI, TEST_CHANNEL_ID: str):
+        params = ConversationHistoryParams(TEST_CHANNEL_ID)
+        response: SlackResponse = api.do(params)
+
+        assert response.status_code == 200
 
     class TestClientError:
         @my_vcr.use_cassette()

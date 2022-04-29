@@ -13,11 +13,11 @@ from slapy.client_errors import ChannelNotFoundError, InvalidAuthError, MissingS
 @dataclass(frozen=True)
 class ConversationHistoryParams:
     channel_id: str
-    cursor: Optional[str] = None,
-    inclusive: Optional[bool] = None,
-    latest: Optional[str] = None,
-    limit: Optional[int] = None,
-    oldest: Optional[str] = None,
+    cursor: Optional[str] = None
+    inclusive: Optional[bool] = None
+    latest: Optional[str] = None
+    limit: Optional[int] = None
+    oldest: Optional[str] = None
 
 
 @dataclass(frozen=True)
