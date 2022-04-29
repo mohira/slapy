@@ -1,11 +1,11 @@
 interactions:
 - request:
-    body: channel=INVALID_CHANNEL_ID&limit=1000
+    body: channel=INVALID_CHANNEL_ID
     headers:
       Connection:
       - close
       Content-Length:
-      - '37'
+      - '26'
       Content-Type:
       - application/x-www-form-urlencoded
       Host:
@@ -16,7 +16,7 @@ interactions:
     uri: https://www.slack.com/api/conversations.history
   response:
     body:
-      string: '{"ok":false,"error":"channel_not_found"}'
+      string: '{"ok": false, "error": "channel_not_found", "messages": "{{MASKED DATA}}"}'
     headers:
       access-control-allow-headers:
       - slack-route, x-slack-version-ts, x-b3-traceid, x-b3-spanid, x-b3-parentspanid,
@@ -32,7 +32,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 29 Apr 2022 10:28:58 GMT
+      - Fri, 29 Apr 2022 11:48:31 GMT
       expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       pragma:
@@ -48,7 +48,7 @@ interactions:
       vary:
       - Accept-Encoding
       via:
-      - envoy-www-iad-lwhy, envoy-edge-nrt-24zs
+      - envoy-www-iad-6hr7, envoy-edge-nrt-setd
       x-accepted-oauth-scopes:
       - channels:history,groups:history,mpim:history,im:history,read
       x-backend:
@@ -59,19 +59,19 @@ interactions:
       x-edge-backend:
       - envoy-www
       x-envoy-upstream-service-time:
-      - '191'
+      - '180'
       x-oauth-scopes:
       - identify,channels:history,groups:history,channels:read
       x-powered-by:
       - HHVM/4.153.1
       x-server:
-      - slack-www-hhvm-main-iad-ura2
+      - slack-www-hhvm-main-iad-gs4n
       x-slack-backend:
       - r
       x-slack-edge-shared-secret-outcome:
       - no-match
       x-slack-req-id:
-      - 579eb5dd720b87677030516cd13f78d5
+      - 2db927f390eab212609f522be28180bf
       x-slack-shared-secret-outcome:
       - no-match
       x-xss-protection:

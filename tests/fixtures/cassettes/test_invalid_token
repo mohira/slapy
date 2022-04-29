@@ -1,11 +1,11 @@
 interactions:
 - request:
-    body: channel=C03D5R0T8TU&limit=1000
+    body: channel=C03D5R0T8TU
     headers:
       Connection:
       - close
       Content-Length:
-      - '30'
+      - '19'
       Content-Type:
       - application/x-www-form-urlencoded
       Host:
@@ -16,7 +16,7 @@ interactions:
     uri: https://www.slack.com/api/conversations.history
   response:
     body:
-      string: '{"ok":false,"error":"invalid_auth"}'
+      string: '{"ok": false, "error": "invalid_auth", "messages": "{{MASKED DATA}}"}'
     headers:
       access-control-allow-headers:
       - slack-route, x-slack-version-ts, x-b3-traceid, x-b3-spanid, x-b3-parentspanid,
@@ -32,7 +32,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 29 Apr 2022 10:28:58 GMT
+      - Fri, 29 Apr 2022 11:48:31 GMT
       expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       pragma:
@@ -48,7 +48,7 @@ interactions:
       vary:
       - Accept-Encoding
       via:
-      - envoy-www-iad-mlh0, envoy-edge-nrt-1e0o
+      - envoy-www-iad-pv2o, envoy-edge-nrt-5hdf
       x-backend:
       - main_normal main_bedrock_normal_with_overflow main_canary_with_overflow main_bedrock_canary_with_overflow
         main_control_with_overflow main_bedrock_control_with_overflow
@@ -57,19 +57,19 @@ interactions:
       x-edge-backend:
       - envoy-www
       x-envoy-upstream-service-time:
-      - '172'
+      - '174'
       x-powered-by:
       - HHVM/4.153.1
       x-robots-tag:
       - noindex,nofollow
       x-server:
-      - slack-www-hhvm-main-iad-0pam
+      - slack-www-hhvm-main-iad-i8bx
       x-slack-backend:
       - r
       x-slack-edge-shared-secret-outcome:
       - no-match
       x-slack-req-id:
-      - a9af31a0d8a2fb02fdcfe900e3a042ca
+      - cac3b897901fa5e3bbab859fc690391c
       x-slack-shared-secret-outcome:
       - no-match
       x-xss-protection:
