@@ -15,3 +15,7 @@ class MissingScopeError(SlackApiError):
 
 class UndefinedClientError(SlackApiError):
     pass
+
+
+class ThreadNotFoundError(SlackApiError):
+    pass
