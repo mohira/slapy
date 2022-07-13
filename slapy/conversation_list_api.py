@@ -14,9 +14,9 @@ from slapy.client_errors import InvalidAuthError, MissingScopeError, UndefinedCl
 class ConversationListParams:
     cursor: Optional[str] = None
     exclude_archived: Optional[bool] = None
-    limit: Optional[int] = None
+    limit: Optional[int] = 1000
     team_id: Optional[str] = None
-    types: Optional[str] = None
+    types: Optional[str] = 'public_channel,private_channel'
 
 
 @dataclass(frozen=True)
